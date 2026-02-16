@@ -170,7 +170,7 @@ describe('WebSocketClient', () => {
         const joinHandler = jest.fn();
         ws.on('join', joinHandler);
         const joinMsg = {
-            event: 'custom_com.mattermost.calls_join',
+            event: 'custom_io.codemagic.marijan.demo.reactnative.calls_join',
             seq: 1,
             data: {
                 connID: 'new_conn_id',
@@ -184,7 +184,7 @@ describe('WebSocketClient', () => {
         const errorHandler = jest.fn();
         ws.on('error', errorHandler);
         const errorMsg = {
-            event: 'custom_com.mattermost.calls_error',
+            event: 'custom_io.codemagic.marijan.demo.reactnative.calls_error',
             seq: 2,
             data: {
                 connID: 'new_conn_id',
@@ -199,7 +199,7 @@ describe('WebSocketClient', () => {
         const messageHandler = jest.fn();
         ws.on('message', messageHandler);
         const signalMsg = {
-            event: 'custom_com.mattermost.calls_signal',
+            event: 'custom_io.codemagic.marijan.demo.reactnative.calls_signal',
             seq: 3,
             data: {
                 connID: 'new_conn_id',
@@ -220,7 +220,7 @@ describe('WebSocketClient', () => {
 
         // Test message with wrong connID
         const wrongConnIDMsg = {
-            event: 'custom_com.mattermost.calls_signal',
+            event: 'custom_io.codemagic.marijan.demo.reactnative.calls_signal',
             seq: 5,
             data: {
                 connID: 'wrong_conn_id',
@@ -245,7 +245,7 @@ describe('WebSocketClient', () => {
         ws.ws.readyState = WebSocket.OPEN;
         ws.send(action, data);
         expect(ws.ws.send).toHaveBeenCalledWith(JSON.stringify({
-            action: `custom_com.mattermost.calls_${action}`,
+            action: `custom_io.codemagic.marijan.demo.reactnative.calls_${action}`,
             seq: 1,
             data,
         }));
@@ -254,7 +254,7 @@ describe('WebSocketClient', () => {
         // Test binary message
         ws.send(action, data, true);
         expect(ws.ws.send).toHaveBeenCalledWith(encode({
-            action: `custom_com.mattermost.calls_${action}`,
+            action: `custom_io.codemagic.marijan.demo.reactnative.calls_${action}`,
             seq: 2,
             data,
         }));

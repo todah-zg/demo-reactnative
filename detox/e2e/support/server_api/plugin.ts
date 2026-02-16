@@ -21,17 +21,17 @@ import {apiUploadFile, getResponseFromError} from './common';
 const prepackagedPlugins = new Set([
     'antivirus',
     'mattermost-autolink',
-    'com.mattermost.aws-sns',
-    'com.mattermost.plugin-channel-export',
-    'com.mattermost.custom-attributes',
+    'io.codemagic.marijan.demo.reactnative.aws-sns',
+    'io.codemagic.marijan.demo.reactnative.plugin-channel-export',
+    'io.codemagic.marijan.demo.reactnative.custom-attributes',
     'github',
     'com.github.manland.mattermost-plugin-gitlab',
-    'com.mattermost.plugin-incident-management',
+    'io.codemagic.marijan.demo.reactnative.plugin-incident-management',
     'jenkins',
     'jira',
-    'com.mattermost.calls',
-    'com.mattermost.nps',
-    'com.mattermost.welcomebot',
+    'io.codemagic.marijan.demo.reactnative.calls',
+    'io.codemagic.marijan.demo.reactnative.nps',
+    'io.codemagic.marijan.demo.reactnative.welcomebot',
     'zoom',
 ]);
 
@@ -55,7 +55,7 @@ export const apiGetLatestPluginVersion = async (repo: string): Promise<string> =
 
 // Demo Plugin Constants
 export const DemoPlugin = {
-    id: 'com.mattermost.demo-plugin',
+    id: 'io.codemagic.marijan.demo.reactnative.demo-plugin',
     repo: 'mattermost/mattermost-plugin-demo',
 
     // Get download URL for latest version (linux-amd64 for CI compatibility)

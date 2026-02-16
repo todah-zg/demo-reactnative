@@ -198,7 +198,7 @@ describe('websocket event handlers', () => {
                 broadcast: {channel_id: channelId},
                 data: {},
             } as WebSocketMessage<EmptyData>);
-            expect(DeviceEventEmitter.emit).toHaveBeenCalledWith('custom_com.mattermost.calls_call_end', {channelId});
+            expect(DeviceEventEmitter.emit).toHaveBeenCalledWith('custom_io.codemagic.marijan.demo.reactnative.calls_call_end', {channelId});
             expect(callEnded).toHaveBeenCalledWith(serverUrl, channelId);
         });
     });
@@ -271,7 +271,7 @@ describe('websocket event handlers', () => {
                 emoji: {name: 'thumbsup', unified: '1F44D'},
             };
             handleCallUserReacted(serverUrl, {
-                event: 'custom_com.mattermost.calls_reaction',
+                event: 'custom_io.codemagic.marijan.demo.reactnative.calls_reaction',
                 seq: 1,
                 broadcast: {
                     omit_users: {} as Dictionary<boolean>,
@@ -438,7 +438,7 @@ describe('websocket event handlers', () => {
             };
 
             handleCallCaption(serverUrl, {
-                event: 'custom_com.mattermost.calls_caption',
+                event: 'custom_io.codemagic.marijan.demo.reactnative.calls_caption',
                 seq: 1,
                 broadcast: {
                     omit_users: {} as Dictionary<boolean>,

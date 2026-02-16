@@ -192,7 +192,7 @@ export default class ClientBase extends ClientTracking {
     }
 
     getAppsProxyRoute() {
-        return this.getPluginRoute('com.mattermost.apps');
+        return this.getPluginRoute('io.codemagic.marijan.demo.reactnative.apps');
     }
 
     getCallsRoute() {

@@ -73,7 +73,7 @@ const mockClient = {
     getPluginsManifests: jest.fn(() => (
         [
             {id: 'playbooks'},
-            {id: 'com.mattermost.calls'},
+            {id: 'io.codemagic.marijan.demo.reactnative.calls'},
         ]
     )),
     enableChannelCalls: jest.fn(),
@@ -236,7 +236,7 @@ describe('Actions.Calls', () => {
         mockClient.getPluginsManifests = jest.fn(() => (
             [
                 {id: 'playbooks'},
-                {id: 'com.mattermost.calls'},
+                {id: 'io.codemagic.marijan.demo.reactnative.calls'},
             ]
         ));
         mockClient.enableChannelCalls.mockClear();

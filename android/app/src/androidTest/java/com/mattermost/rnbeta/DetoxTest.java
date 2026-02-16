@@ -1,4 +1,4 @@
-package com.mattermost.rnbeta;
+package io.codemagic.marijan.demo.reactnative;
 
 import com.wix.detox.Detox;
 import com.wix.detox.config.DetoxConfig;

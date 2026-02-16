@@ -121,7 +121,7 @@ async function pluginInstallAndEnable(siteUrl: string, latestVersion: string) {
     await wait(2000);
     const statusCheck = await Plugin.apiGetPluginStatus(siteUrl, DemoPlugin.id, latestVersion);
     if (!statusCheck.isActive) {
-        await Plugin.apiEnablePluginById(siteUrl, 'com.mattermost.demo-plugin');
+        await Plugin.apiEnablePluginById(siteUrl, 'io.codemagic.marijan.demo.reactnative.demo-plugin');
         await wait(2000);
     }
     if (!statusCheck.isVersionMatch) {
@@ -153,10 +153,10 @@ describe('Interactive Dialog - Basic Dialog (Plugin)', () => {
                 AllowInsecureDownloadUrl: true,
                 EnableUploads: true,
                 PluginStates: {
-                    'com.mattermost.demo-plugin': {'Enable': true},
+                    'io.codemagic.marijan.demo.reactnative.demo-plugin': {'Enable': true},
                 },
                 Plugins: {
-                    'com.mattermost.demo-plugin': {
+                    'io.codemagic.marijan.demo.reactnative.demo-plugin': {
                         'DialogOnlyMode': true,
                     },
                 }},

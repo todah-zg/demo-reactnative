@@ -33,7 +33,7 @@ jest.mock('react-native-keychain', () => ({
 jest.mock('@utils/log');
 jest.mock('@utils/mattermost_managed', () => ({
     getIOSAppGroupDetails: jest.fn().mockReturnValue({
-        appGroupIdentifier: 'group.com.mattermost.test',
+        appGroupIdentifier: 'group.io.codemagic.marijan.demo.reactnative.test',
     }),
 }));
 jest.mock('@database/manager', () => ({
@@ -115,7 +115,7 @@ describe('credentials', () => {
                 mockToken,
                 mockToken,
                 expect.objectContaining({
-                    accessGroup: 'group.com.mattermost.test',
+                    accessGroup: 'group.io.codemagic.marijan.demo.reactnative.test',
                 }),
             );
         });
