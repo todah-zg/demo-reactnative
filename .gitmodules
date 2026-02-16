@@ -6,6 +6,6 @@
 #   git add libraries/@mattermost/intune
 #   git commit -m "Update Intune submodule to <version>"
 
-[submodule "libraries/@mattermost/intune"]
-	path = libraries/@mattermost/intune
-	url = https://github.com/mattermost/mattermost-mobile-intune.git
+#[submodule "libraries/@mattermost/intune"]
+#	path = libraries/@mattermost/intune
+#	url = https://github.com/mattermost/mattermost-mobile-intune.git
