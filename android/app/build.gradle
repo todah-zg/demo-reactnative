@@ -123,12 +123,17 @@ android {
 
     signingConfigs {
         release {
-            if (project.hasProperty('MATTERMOST_RELEASE_STORE_FILE')) {
-                storeFile file(MATTERMOST_RELEASE_STORE_FILE)
-                storePassword MATTERMOST_RELEASE_PASSWORD
-                keyAlias MATTERMOST_RELEASE_KEY_ALIAS
-                keyPassword MATTERMOST_RELEASE_PASSWORD
-            }
+            if (System.getenv()["CI"]) { // CI=true is exported by Codemagic
+                  storeFile file(System.getenv()["CM_KEYSTORE_PATH"])
+                  storePassword System.getenv()["CM_KEYSTORE_PASSWORD"]
+                  keyAlias System.getenv()["CM_KEY_ALIAS"]
+                  keyPassword System.getenv()["CM_KEY_PASSWORD"]
+              } else {
+                  keyAlias keystoreProperties['keyAlias']
+                  keyPassword keystoreProperties['keyPassword']
+                  storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+                  storePassword keystoreProperties['storePassword']
+              }
         }
         debug {
             storeFile file('debug.keystore')
@@ -146,19 +151,19 @@ android {
         }
     }
     buildTypes {
-        def useReleaseKey = project.hasProperty('MATTERMOST_RELEASE_STORE_FILE')
+        // def useReleaseKey = project.hasProperty('MATTERMOST_RELEASE_STORE_FILE')
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             proguardFile "${rootProject.projectDir}/../node_modules/detox/android/detox/proguard-rules-app.pro"
-            if (useReleaseKey) {
+            if (System.getenv()["CI"]) {
                 signingConfig signingConfigs.release
             } else {
                 signingConfig signingConfigs.debug
             }
         }
         debug {
-            if (useReleaseKey) {
+            if (System.getenv()["CI"]) {
                 signingConfig signingConfigs.release
             } else {
                 signingConfig signingConfigs.debug
