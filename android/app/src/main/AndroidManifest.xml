@@ -71,7 +71,7 @@
           <action android:name="android.intent.action.VIEW" />
           <category android:name="android.intent.category.DEFAULT" />
           <category android:name="android.intent.category.BROWSABLE" />
-          <data android:scheme="mattermost" />
+          <data android:scheme="codemagic" />
         </intent-filter>
         <intent-filter>
           <action android:name="android.intent.action.VIEW" />
@@ -93,11 +93,11 @@
         android:exported="false"
       />
       <activity
-        android:name="com.mattermost.rnshare.ShareActivity"
+        android:name="io.codemagic.marijan.demo.reactnative.ShareActivity"
         android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
         android:windowSoftInputMode="adjustResize"
         android:theme="@style/AppTheme"
-        android:taskAffinity="com.mattermost.share"
+        android:taskAffinity="io.codemagic.marijan.demo.reactnative.share"
         android:exported="true"
       >
           <intent-filter>
