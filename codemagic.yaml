@@ -6,7 +6,7 @@ workflows:
     environment:
       android_signing:
         - marijan_android_keystore
-      groups:
+      #groups:
       #  - google_play
       vars:
         PACKAGE_NAME: "io.codemagic.marijan.demo.reactnative"
