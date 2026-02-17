@@ -11,7 +11,7 @@ import com.facebook.react.bridge.Arguments;
 
 import com.facebook.react.bridge.WritableMap;
 import com.mattermost.rnutils.helpers.*;
-import io.codemagic.marijan.demo.reactnative.turbolog.TurboLog;
+import com.mattermost.turbolog.TurboLog;
 
 import okhttp3.Response;
 

@@ -6,7 +6,7 @@ import android.app.IntentService;
 import android.os.Bundle;
 
 import com.mattermost.rnutils.helpers.NotificationHelper;
-import io.codemagic.marijan.demo.reactnative.turbolog.TurboLog;
+import com.mattermost.turbolog.TurboLog;
 import com.wix.reactnativenotifications.core.NotificationIntentAdapter;
 
 public class NotificationDismissService extends IntentService {

@@ -8,9 +8,9 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.ReadableMap;
 
-import io.codemagic.marijan.demo.reactnative.networkclient.ApiClientModuleImpl;
-import io.codemagic.marijan.demo.reactnative.networkclient.enums.RetryTypes;
-import io.codemagic.marijan.demo.reactnative.turbolog.TurboLog;
+import com.mattermost.networkclient.ApiClientModuleImpl;
+import com.mattermost.networkclient.enums.RetryTypes;
+import com.mattermost.turbolog.TurboLog;
 
 import okhttp3.HttpUrl;
 import okhttp3.Response;

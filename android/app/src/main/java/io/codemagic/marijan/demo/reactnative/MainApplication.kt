@@ -16,10 +16,10 @@ import com.facebook.react.defaults.DefaultReactNativeHost
 import com.facebook.react.soloader.OpenSourceMergedSoMapping
 import com.facebook.react.modules.network.OkHttpClientProvider
 import com.facebook.soloader.SoLoader
-import io.codemagic.marijan.demo.reactnative.networkclient.RCTOkHttpClientFactory
-import io.codemagic.marijan.demo.reactnative.rnshare.helpers.RealPathUtil
-import io.codemagic.marijan.demo.reactnative.turbolog.TurboLog
-import io.codemagic.marijan.demo.reactnative.turbolog.ConfigureOptions
+import com.mattermost.networkclient.RCTOkHttpClientFactory
+import com.mattermost.rnshare.helpers.RealPathUtil
+import com.mattermost.turbolog.TurboLog
+import com.mattermost.turbolog.ConfigureOptions
 import com.nozbe.watermelondb.jsi.JSIInstaller
 import com.nozbe.watermelondb.jsi.WatermelonDBJSIPackage
 import com.reactnativenavigation.NavigationApplication

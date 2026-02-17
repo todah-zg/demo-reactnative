@@ -31,7 +31,7 @@ import androidx.core.graphics.drawable.IconCompat;
 import io.codemagic.marijan.demo.reactnative.*;
 import com.mattermost.rnutils.helpers.NotificationHelper;
 import com.nozbe.watermelondb.WMDatabase;
-import io.codemagic.marijan.demo.reactnative.turbolog.TurboLog;
+import com.mattermost.turbolog.TurboLog;
 
 import java.io.IOException;
 import java.security.KeyFactory;

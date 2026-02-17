@@ -14,7 +14,7 @@ import com.mattermost.rnutils.helpers.push_notification.fetchNeededUsers
 import com.mattermost.rnutils.helpers.push_notification.fetchPosts
 import com.mattermost.rnutils.helpers.push_notification.fetchTeamIfNeeded
 import com.mattermost.rnutils.helpers.push_notification.fetchThread
-import io.codemagic.marijan.demo.reactnative.turbolog.TurboLog
+import com.mattermost.turbolog.TurboLog
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock

@@ -10,7 +10,7 @@ import com.mattermost.rnutils.helpers.Network
 import com.mattermost.rnutils.helpers.PushNotificationDataHelper
 import com.mattermost.rnutils.helpers.database_extension.getServerUrlForIdentifier
 import com.mattermost.rnutils.helpers.NotificationHelper
-import io.codemagic.marijan.demo.reactnative.turbolog.TurboLog
+import com.mattermost.turbolog.TurboLog
 import com.wix.reactnativenotifications.Defs.NOTIFICATION_RECEIVED_EVENT_NAME
 import com.wix.reactnativenotifications.core.AppLaunchHelper
 import com.wix.reactnativenotifications.core.AppLifecycleFacade
