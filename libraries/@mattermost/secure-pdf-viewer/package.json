@@ -12,7 +12,7 @@
     "type": "components",
     "jsSrcsDir": "src",
     "android": {
-      "javaPackageName": "io.codemagic.marijan.demo.reactnative.securepdfviewer"
+      "javaPackageName": "com.mattermost.securepdfviewer"
     },
     "ios": {
       "componentProvider": {

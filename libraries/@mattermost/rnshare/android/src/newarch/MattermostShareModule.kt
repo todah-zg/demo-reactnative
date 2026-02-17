@@ -1,4 +1,4 @@
-package io.codemagic.marijan.demo.reactnative.rnshare
+package com.mattermost.rnshare
 
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext

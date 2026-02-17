@@ -8,7 +8,7 @@
     "type": "modules",
     "jsSrcsDir": "src",
     "android": {
-      "javaPackageName": "io.codemagic.marijan.demo.reactnative.rnutils"
+      "javaPackageName": "com.mattermost.rnutils"
     }
   },
   "author": "Mattermost, Inc.",

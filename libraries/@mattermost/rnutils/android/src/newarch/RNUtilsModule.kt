@@ -1,4 +1,4 @@
-package io.codemagic.marijan.demo.reactnative.rnutils
+package com.mattermost.rnutils
 
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext

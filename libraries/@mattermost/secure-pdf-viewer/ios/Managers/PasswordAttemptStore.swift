@@ -2,7 +2,7 @@ import Foundation
 import Security
 
 class PasswordAttemptStore {
-    private let service = "io.codemagic.marijan.demo.reactnative.securepdfviewer.password.attempts"
+    private let service = "com.mattermost.securepdfviewer.password.attempts"
     private let maxAttempts = 10
     private let restDelay: TimeInterval = 10 * 60
 
