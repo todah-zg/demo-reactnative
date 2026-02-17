@@ -3,8 +3,8 @@ package io.codemagic.marijan.demo.reactnative.securepdfviewer.view.callbacks
 import android.util.Log
 import android.view.View.MeasureSpec
 import android.widget.FrameLayout
-import io.codemagic.marijan.demo.reactnative.pdfium.exceptions.InvalidPasswordException
-import io.codemagic.marijan.demo.reactnative.pdfium.exceptions.PasswordRequiredException
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.exceptions.InvalidPasswordException
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.exceptions.PasswordRequiredException
 import io.codemagic.marijan.demo.reactnative.securepdfviewer.manager.PasswordAttemptStore
 import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.PdfView
 import io.codemagic.marijan.demo.reactnative.securepdfviewer.util.HashUtils

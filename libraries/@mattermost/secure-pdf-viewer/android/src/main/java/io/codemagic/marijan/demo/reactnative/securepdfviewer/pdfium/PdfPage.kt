@@ -3,8 +3,8 @@ package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium
 import android.graphics.Bitmap
 import android.graphics.Bitmap.createBitmap
 import android.util.Log
-import io.codemagic.marijan.demo.reactnative.pdfium.PdfBridge
-import io.codemagic.marijan.demo.reactnative.pdfium.model.PdfLink
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.PdfBridge
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.model.PdfLink
 import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfContext
 
 /**

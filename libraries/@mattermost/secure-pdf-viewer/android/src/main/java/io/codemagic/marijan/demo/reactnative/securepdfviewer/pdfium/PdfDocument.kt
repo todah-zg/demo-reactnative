@@ -1,10 +1,10 @@
 package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium
 
 import android.util.Log
-import io.codemagic.marijan.demo.reactnative.pdfium.PdfBridge
-import io.codemagic.marijan.demo.reactnative.pdfium.exceptions.DocumentOpenException
-import io.codemagic.marijan.demo.reactnative.pdfium.exceptions.InvalidPasswordException
-import io.codemagic.marijan.demo.reactnative.pdfium.exceptions.PasswordRequiredException
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.PdfBridge
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.exceptions.DocumentOpenException
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.exceptions.InvalidPasswordException
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.exceptions.PasswordRequiredException
 import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfContext
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicBoolean

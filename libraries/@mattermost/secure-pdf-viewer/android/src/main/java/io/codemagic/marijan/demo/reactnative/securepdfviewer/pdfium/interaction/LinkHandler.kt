@@ -2,7 +2,7 @@ package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.interaction
 
 import android.graphics.RectF
 import android.util.Log
-import io.codemagic.marijan.demo.reactnative.pdfium.model.PdfLink
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.model.PdfLink
 import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.PdfPage
 import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfContext
 import kotlinx.coroutines.launch

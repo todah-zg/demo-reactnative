@@ -9,7 +9,7 @@ import android.view.MotionEvent
 import android.view.ScaleGestureDetector
 import android.view.View
 import android.widget.Scroller
-import io.codemagic.marijan.demo.reactnative.pdfium.model.PdfLink
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.model.PdfLink
 import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.gesture.ScaleListener
 import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.gesture.ScrollGestureListener
 import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.interaction.LinkHandler

@@ -2,7 +2,7 @@ package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared
 
 import android.content.Context
 import android.widget.Scroller
-import io.codemagic.marijan.demo.reactnative.pdfium.model.PdfLink
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.model.PdfLink
 import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.PdfDocument
 import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.cache.PdfCacheManager
 import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.gesture.ScaleListener
