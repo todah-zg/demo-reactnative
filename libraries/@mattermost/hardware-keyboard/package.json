@@ -8,7 +8,7 @@
     "type": "modules",
     "jsSrcsDir": "src",
     "android": {
-      "javaPackageName": "com.mattermost.hardwarekeyboard"
+      "javaPackageName": "io.codemagic.marijan.demo.reactnative.hardwarekeyboard"
     }
   },
   "author": "Mattermost, Inc.",

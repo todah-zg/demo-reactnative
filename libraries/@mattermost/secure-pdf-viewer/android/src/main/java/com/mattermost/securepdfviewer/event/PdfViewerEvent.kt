@@ -1,4 +1,4 @@
-package com.mattermost.securepdfviewer.event
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.event
 
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.uimanager.events.Event

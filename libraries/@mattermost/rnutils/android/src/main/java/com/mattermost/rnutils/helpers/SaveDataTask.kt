@@ -1,4 +1,4 @@
-package com.mattermost.rnutils.helpers
+package io.codemagic.marijan.demo.reactnative.rnutils.helpers
 
 import android.app.Activity
 import android.content.Intent
@@ -10,7 +10,7 @@ import com.facebook.react.bridge.ActivityEventListener
 import com.facebook.react.bridge.BaseActivityEventListener
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import com.mattermost.rnutils.enums.Events
+import io.codemagic.marijan.demo.reactnative.rnutils.enums.Events
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers

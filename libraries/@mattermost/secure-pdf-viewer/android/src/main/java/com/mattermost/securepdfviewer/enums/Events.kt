@@ -1,4 +1,4 @@
-package com.mattermost.securepdfviewer.enums
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.enums
 
 /**
  * Enumeration of all events that can be emitted from the PDF viewer to React Native.

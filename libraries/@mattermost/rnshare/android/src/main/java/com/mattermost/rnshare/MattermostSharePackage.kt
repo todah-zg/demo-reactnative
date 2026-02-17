@@ -1,4 +1,4 @@
-package com.mattermost.rnshare
+package io.codemagic.marijan.demo.reactnative.rnshare
 
 import com.facebook.react.TurboReactPackage
 import com.facebook.react.bridge.NativeModule

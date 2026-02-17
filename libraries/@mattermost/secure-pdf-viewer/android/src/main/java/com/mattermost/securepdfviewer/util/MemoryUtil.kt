@@ -1,8 +1,8 @@
-package com.mattermost.securepdfviewer.util
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.util
 
 import android.app.ActivityManager
 import android.content.Context
-import com.mattermost.securepdfviewer.model.DeviceMemory
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.model.DeviceMemory
 
 /**
  * Memory management utilities for safe PDF processing operations.

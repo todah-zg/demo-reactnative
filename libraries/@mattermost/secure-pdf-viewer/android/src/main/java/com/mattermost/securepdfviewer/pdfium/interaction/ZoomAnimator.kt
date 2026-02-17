@@ -1,9 +1,9 @@
-package com.mattermost.securepdfviewer.pdfium.interaction
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.interaction
 
 import android.util.Log
-import com.mattermost.securepdfviewer.pdfium.PdfView.Companion.PAGE_SPACING
-import com.mattermost.securepdfviewer.pdfium.shared.PdfContext
-import com.mattermost.securepdfviewer.pdfium.shared.PdfViewInterface
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.PdfView.Companion.PAGE_SPACING
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfContext
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfViewInterface
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

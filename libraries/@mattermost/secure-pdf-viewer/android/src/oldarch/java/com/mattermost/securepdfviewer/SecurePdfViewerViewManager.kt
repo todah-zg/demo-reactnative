@@ -1,10 +1,10 @@
-package com.mattermost.securepdfviewer
+package io.codemagic.marijan.demo.reactnative.securepdfviewer
 
 import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
-import com.mattermost.securepdfviewer.enums.Events
-import com.mattermost.securepdfviewer.view.SecurePdfViewerView
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.enums.Events
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.view.SecurePdfViewerView
 
 /**
  * View manager for the Secure PDF Viewer component in React Native's legacy architecture.

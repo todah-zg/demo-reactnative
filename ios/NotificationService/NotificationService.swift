@@ -35,7 +35,7 @@ class NotificationService: UNNotificationServiceExtension {
   private var isLoggerConfigured = false
 
   // Thread-safe access to bestAttemptContent
-  private let contentQueue = DispatchQueue(label: "com.mattermost.notification.content", attributes: .concurrent)
+  private let contentQueue = DispatchQueue(label: "io.codemagic.marijan.demo.reactnative.notification.content", attributes: .concurrent)
   private var _bestAttemptContent: UNMutableNotificationContent?
 
   var bestAttemptContent: UNMutableNotificationContent? {

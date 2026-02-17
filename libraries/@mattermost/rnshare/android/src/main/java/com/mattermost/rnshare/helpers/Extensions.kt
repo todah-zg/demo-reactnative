@@ -1,4 +1,4 @@
-package com.mattermost.rnshare.helpers
+package io.codemagic.marijan.demo.reactnative.rnshare.helpers
 
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap

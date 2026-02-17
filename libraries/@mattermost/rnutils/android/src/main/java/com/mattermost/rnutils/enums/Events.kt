@@ -1,4 +1,4 @@
-package com.mattermost.rnutils.enums
+package io.codemagic.marijan.demo.reactnative.rnutils.enums
 
 enum class Events(val event: String) {
     SAVE_ERROR_EVENT("SaveError"),

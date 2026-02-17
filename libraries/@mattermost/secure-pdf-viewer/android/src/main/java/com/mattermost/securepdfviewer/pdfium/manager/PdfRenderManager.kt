@@ -1,4 +1,4 @@
-package com.mattermost.securepdfviewer.pdfium.manager
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.manager
 
 import android.graphics.Canvas
 import android.graphics.Color
@@ -6,8 +6,8 @@ import android.graphics.Paint
 import android.graphics.RectF
 import android.util.Log
 import androidx.core.graphics.withTranslation
-import com.mattermost.securepdfviewer.pdfium.shared.PdfContext
-import com.mattermost.securepdfviewer.pdfium.shared.PdfViewInterface
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfContext
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfViewInterface
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import java.util.concurrent.ConcurrentHashMap

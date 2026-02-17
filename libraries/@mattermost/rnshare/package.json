@@ -9,7 +9,7 @@
     "jsSrcsDir": "src",
     "platforms": ["android"],
     "android": {
-      "javaPackageName": "com.mattermost.rnshare"
+      "javaPackageName": "io.codemagic.marijan.demo.reactnative.rnshare"
     }
   },
   "author": "Mattermost, Inc.",

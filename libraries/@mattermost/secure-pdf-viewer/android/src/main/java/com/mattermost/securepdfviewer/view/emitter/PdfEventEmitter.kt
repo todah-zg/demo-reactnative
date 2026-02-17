@@ -1,4 +1,4 @@
-package com.mattermost.securepdfviewer.view.emitter
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.view.emitter
 
 import android.content.Context
 import android.view.MotionEvent
@@ -7,10 +7,10 @@ import com.facebook.react.bridge.ReactContext
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.uimanager.UIManagerHelper
 import com.facebook.react.uimanager.events.RCTEventEmitter
-import com.mattermost.securepdfviewer.BuildConfig
-import com.mattermost.securepdfviewer.enums.Events
-import com.mattermost.securepdfviewer.event.PdfViewerEvent
-import com.mattermost.securepdfviewer.manager.PasswordAttemptStore
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.BuildConfig
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.enums.Events
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.event.PdfViewerEvent
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.manager.PasswordAttemptStore
 
 /**
  * Handles all React Native event emission for the PDF viewer.

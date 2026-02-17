@@ -1,4 +1,4 @@
-package com.mattermost.rnutils.helpers
+package io.codemagic.marijan.demo.reactnative.rnutils.helpers
 
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.Promise

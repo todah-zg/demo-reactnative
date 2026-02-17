@@ -1,14 +1,14 @@
-package com.mattermost.securepdfviewer.view
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.view
 
 import android.content.Context
 import android.graphics.drawable.ColorDrawable
 import android.widget.FrameLayout
-import com.mattermost.securepdfviewer.manager.PasswordAttemptStore
-import com.mattermost.securepdfviewer.pdfium.PdfView
-import com.mattermost.securepdfviewer.view.callbacks.PdfViewCallbacks
-import com.mattermost.securepdfviewer.view.emitter.PdfEventEmitter
-import com.mattermost.securepdfviewer.view.interaction.ScrollBarHandler
-import com.mattermost.securepdfviewer.view.manager.PdfLoadManager
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.manager.PasswordAttemptStore
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.PdfView
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.view.callbacks.PdfViewCallbacks
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.view.emitter.PdfEventEmitter
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.view.interaction.ScrollBarHandler
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.view.manager.PdfLoadManager
 
 /**
  * Main PDF viewer component that integrates with React Native.

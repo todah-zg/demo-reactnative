@@ -1,4 +1,4 @@
-package com.mattermost.securepdfviewer.view.scrollhandle
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.view.scrollhandle
 
 import android.content.Context
 import android.graphics.Canvas

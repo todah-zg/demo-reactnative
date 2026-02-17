@@ -1,4 +1,4 @@
-package com.mattermost.securepdfviewer.model
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.model
 
 /**
  * Data class representing the current memory state of the Android device.

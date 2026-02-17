@@ -1,9 +1,9 @@
-package com.mattermost.securepdfviewer.pdfium.layout
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.layout
 
 import android.graphics.PointF
 import android.util.Log
-import com.mattermost.securepdfviewer.pdfium.shared.PdfContext
-import com.mattermost.securepdfviewer.pdfium.shared.PdfViewInterface
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfContext
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfViewInterface
 
 /**
  * Utility class for converting coordinates between different coordinate systems in the PDF viewer.

@@ -1,11 +1,11 @@
-package com.mattermost.securepdfviewer.pdfium
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium
 
 import android.util.Log
-import com.mattermost.pdfium.PdfBridge
-import com.mattermost.pdfium.exceptions.DocumentOpenException
-import com.mattermost.pdfium.exceptions.InvalidPasswordException
-import com.mattermost.pdfium.exceptions.PasswordRequiredException
-import com.mattermost.securepdfviewer.pdfium.shared.PdfContext
+import io.codemagic.marijan.demo.reactnative.pdfium.PdfBridge
+import io.codemagic.marijan.demo.reactnative.pdfium.exceptions.DocumentOpenException
+import io.codemagic.marijan.demo.reactnative.pdfium.exceptions.InvalidPasswordException
+import io.codemagic.marijan.demo.reactnative.pdfium.exceptions.PasswordRequiredException
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfContext
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicBoolean
 

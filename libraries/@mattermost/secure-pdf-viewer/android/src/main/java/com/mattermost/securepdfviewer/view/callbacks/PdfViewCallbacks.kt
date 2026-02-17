@@ -1,15 +1,15 @@
-package com.mattermost.securepdfviewer.view.callbacks
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.view.callbacks
 
 import android.util.Log
 import android.view.View.MeasureSpec
 import android.widget.FrameLayout
-import com.mattermost.pdfium.exceptions.InvalidPasswordException
-import com.mattermost.pdfium.exceptions.PasswordRequiredException
-import com.mattermost.securepdfviewer.manager.PasswordAttemptStore
-import com.mattermost.securepdfviewer.pdfium.PdfView
-import com.mattermost.securepdfviewer.util.HashUtils
-import com.mattermost.securepdfviewer.view.SecurePdfViewerView
-import com.mattermost.securepdfviewer.view.emitter.PdfEventEmitter
+import io.codemagic.marijan.demo.reactnative.pdfium.exceptions.InvalidPasswordException
+import io.codemagic.marijan.demo.reactnative.pdfium.exceptions.PasswordRequiredException
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.manager.PasswordAttemptStore
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.PdfView
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.util.HashUtils
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.view.SecurePdfViewerView
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.view.emitter.PdfEventEmitter
 
 /**
  * Manages all callback handlers for PDF view events.

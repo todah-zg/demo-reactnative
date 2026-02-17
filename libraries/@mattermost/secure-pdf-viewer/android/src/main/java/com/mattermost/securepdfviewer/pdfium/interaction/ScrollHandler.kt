@@ -1,9 +1,9 @@
-package com.mattermost.securepdfviewer.pdfium.interaction
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.interaction
 
 import android.util.Log
-import com.mattermost.securepdfviewer.pdfium.interaction.ZoomAnimator.Companion.MIN_ZOOM_SCALE
-import com.mattermost.securepdfviewer.pdfium.shared.PdfContext
-import com.mattermost.securepdfviewer.pdfium.shared.PdfViewInterface
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.interaction.ZoomAnimator.Companion.MIN_ZOOM_SCALE
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfContext
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfViewInterface
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

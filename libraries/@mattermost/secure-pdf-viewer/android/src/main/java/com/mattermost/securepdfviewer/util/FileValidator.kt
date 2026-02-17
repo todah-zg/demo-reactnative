@@ -1,4 +1,4 @@
-package com.mattermost.securepdfviewer.util
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.util
 
 import android.util.Log
 import androidx.core.net.toUri

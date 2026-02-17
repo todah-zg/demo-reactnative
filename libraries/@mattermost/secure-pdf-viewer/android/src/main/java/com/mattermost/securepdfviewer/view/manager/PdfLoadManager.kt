@@ -1,14 +1,14 @@
-package com.mattermost.securepdfviewer.view.manager
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.view.manager
 
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import com.mattermost.securepdfviewer.manager.PasswordAttemptStore
-import com.mattermost.securepdfviewer.pdfium.PdfView
-import com.mattermost.securepdfviewer.util.FileValidator
-import com.mattermost.securepdfviewer.util.HashUtils
-import com.mattermost.securepdfviewer.util.MemoryUtil
-import com.mattermost.securepdfviewer.view.emitter.PdfEventEmitter
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.manager.PasswordAttemptStore
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.PdfView
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.util.FileValidator
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.util.HashUtils
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.util.MemoryUtil
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.view.emitter.PdfEventEmitter
 import java.util.Locale
 
 /**

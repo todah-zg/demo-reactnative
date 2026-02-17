@@ -1,4 +1,4 @@
-package com.mattermost.securepdfviewer.pdfium.util
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.util
 
 import android.content.Context
 import android.util.TypedValue

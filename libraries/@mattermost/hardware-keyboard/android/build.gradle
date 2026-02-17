@@ -25,7 +25,7 @@ if (isNewArchitectureEnabled()) {
 
 android {
   compileSdkVersion safeExtGet('compileSdkVersion', 34)
-  namespace "com.mattermost.hardware.keyboard"
+  namespace "io.codemagic.marijan.demo.reactnative.hardware.keyboard"
 
   defaultConfig {
       minSdkVersion safeExtGet('minSdkVersion', 24)

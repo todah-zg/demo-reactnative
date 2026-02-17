@@ -1,20 +1,20 @@
-package com.mattermost.securepdfviewer.pdfium.shared
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared
 
 import android.content.Context
 import android.widget.Scroller
-import com.mattermost.pdfium.model.PdfLink
-import com.mattermost.securepdfviewer.pdfium.PdfDocument
-import com.mattermost.securepdfviewer.pdfium.cache.PdfCacheManager
-import com.mattermost.securepdfviewer.pdfium.gesture.ScaleListener
-import com.mattermost.securepdfviewer.pdfium.gesture.ScrollGestureListener
-import com.mattermost.securepdfviewer.pdfium.interaction.LinkHandler
-import com.mattermost.securepdfviewer.pdfium.interaction.ScrollHandler
-import com.mattermost.securepdfviewer.pdfium.interaction.ZoomAnimator
-import com.mattermost.securepdfviewer.pdfium.layout.CoordinateConverter
-import com.mattermost.securepdfviewer.pdfium.layout.LayoutCalculator
-import com.mattermost.securepdfviewer.pdfium.manager.PdfDocumentManager
-import com.mattermost.securepdfviewer.pdfium.manager.PdfRenderManager
-import com.mattermost.securepdfviewer.pdfium.util.ViewUtils
+import io.codemagic.marijan.demo.reactnative.pdfium.model.PdfLink
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.PdfDocument
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.cache.PdfCacheManager
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.gesture.ScaleListener
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.gesture.ScrollGestureListener
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.interaction.LinkHandler
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.interaction.ScrollHandler
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.interaction.ZoomAnimator
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.layout.CoordinateConverter
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.layout.LayoutCalculator
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.manager.PdfDocumentManager
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.manager.PdfRenderManager
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.util.ViewUtils
 import kotlinx.coroutines.CoroutineScope
 import java.util.concurrent.atomic.AtomicBoolean
 

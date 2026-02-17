@@ -1,4 +1,4 @@
-package com.mattermost.securepdfviewer.view.interaction
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.view.interaction
 
 import android.content.Context
 import android.os.Handler
@@ -7,12 +7,12 @@ import android.util.Log
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.core.view.isVisible
-import com.mattermost.securepdfviewer.pdfium.PdfView
-import com.mattermost.securepdfviewer.pdfium.util.ViewUtils
-import com.mattermost.securepdfviewer.view.SecurePdfViewerView
-import com.mattermost.securepdfviewer.view.scrollhandle.BubbleView
-import com.mattermost.securepdfviewer.view.scrollhandle.ScrollBarView
-import com.mattermost.securepdfviewer.view.scrollhandle.ScrollThumbView
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.PdfView
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.util.ViewUtils
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.view.SecurePdfViewerView
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.view.scrollhandle.BubbleView
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.view.scrollhandle.ScrollBarView
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.view.scrollhandle.ScrollThumbView
 
 /**
  * Custom scroll handle component for PDF documents with intelligent page indicator and smooth scrolling.

@@ -1,11 +1,11 @@
-package com.mattermost.securepdfviewer.pdfium
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium
 
 import android.graphics.Bitmap
 import android.graphics.Bitmap.createBitmap
 import android.util.Log
-import com.mattermost.pdfium.PdfBridge
-import com.mattermost.pdfium.model.PdfLink
-import com.mattermost.securepdfviewer.pdfium.shared.PdfContext
+import io.codemagic.marijan.demo.reactnative.pdfium.PdfBridge
+import io.codemagic.marijan.demo.reactnative.pdfium.model.PdfLink
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfContext
 
 /**
  * Wrapper for PDFium page functionality, providing optimized rendering and link extraction.

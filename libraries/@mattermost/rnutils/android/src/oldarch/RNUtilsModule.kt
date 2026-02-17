@@ -1,4 +1,4 @@
-package com.mattermost.rnutils
+package io.codemagic.marijan.demo.reactnative.rnutils
 
 import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.Promise

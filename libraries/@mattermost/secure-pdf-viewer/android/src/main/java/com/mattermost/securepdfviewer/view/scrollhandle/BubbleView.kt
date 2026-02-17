@@ -1,4 +1,4 @@
-package com.mattermost.securepdfviewer.view.scrollhandle
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.view.scrollhandle
 
 import android.content.Context
 import android.graphics.Canvas
@@ -8,7 +8,7 @@ import android.util.AttributeSet
 import android.util.Log
 import android.util.TypedValue
 import android.view.View
-import com.mattermost.securepdfviewer.pdfium.util.ViewUtils
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.util.ViewUtils
 
 /**
  * Custom view that displays a floating bubble with page information in the scroll handle.

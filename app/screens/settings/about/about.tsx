@@ -33,7 +33,7 @@ import TosPrivacyContainer from './tos_privacy';
 
 import type {AvailableScreens} from '@typings/screens/navigation';
 
-const MATTERMOST_BUNDLE_IDS = ['io.codemagic.marijan.demo.reactnative.rnbeta', 'com.mattermost.rn'];
+const MATTERMOST_BUNDLE_IDS = ['io.codemagic.marijan.demo.reactnative', 'io.codemagic.marijan.demo.reactnative'];
 
 const getStyleSheet = makeStyleSheetFromTheme((theme) => {
     return {

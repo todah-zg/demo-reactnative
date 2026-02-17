@@ -1,4 +1,4 @@
-package com.mattermost.rnshare
+package io.codemagic.marijan.demo.reactnative.rnshare
 
 import android.content.Context
 import android.content.pm.ServiceInfo
@@ -9,7 +9,7 @@ import androidx.core.app.NotificationCompat
 import androidx.work.ForegroundInfo
 import androidx.work.Worker
 import androidx.work.WorkerParameters
-import com.mattermost.rnshare.helpers.RealPathUtil
+import io.codemagic.marijan.demo.reactnative.rnshare.helpers.RealPathUtil
 import okhttp3.CertificatePinner
 import okhttp3.MediaType
 import okhttp3.MediaType.Companion.toMediaType

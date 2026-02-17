@@ -1,4 +1,4 @@
-package com.mattermost.rnutils.helpers
+package io.codemagic.marijan.demo.reactnative.rnutils.helpers
 
 import android.content.Context
 import android.database.Cursor

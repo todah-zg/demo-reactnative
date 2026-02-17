@@ -1,10 +1,10 @@
-package com.mattermost.securepdfviewer.pdfium.interaction
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.interaction
 
 import android.graphics.RectF
 import android.util.Log
-import com.mattermost.pdfium.model.PdfLink
-import com.mattermost.securepdfviewer.pdfium.PdfPage
-import com.mattermost.securepdfviewer.pdfium.shared.PdfContext
+import io.codemagic.marijan.demo.reactnative.pdfium.model.PdfLink
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.PdfPage
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfContext
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 

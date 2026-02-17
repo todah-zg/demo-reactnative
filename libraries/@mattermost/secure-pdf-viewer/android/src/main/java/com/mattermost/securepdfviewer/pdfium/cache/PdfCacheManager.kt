@@ -1,8 +1,8 @@
-package com.mattermost.securepdfviewer.pdfium.cache
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.cache
 
 import android.graphics.Bitmap
 import android.util.Log
-import com.mattermost.pdfium.model.PdfLink
+import io.codemagic.marijan.demo.reactnative.pdfium.model.PdfLink
 import java.util.concurrent.ConcurrentHashMap
 
 /**

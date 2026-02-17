@@ -1,4 +1,4 @@
-package com.mattermost.rnshare
+package io.codemagic.marijan.demo.reactnative.rnshare
 
 import android.app.Activity
 import android.content.Context
@@ -11,7 +11,7 @@ import androidx.core.net.toUri
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableMap
-import com.mattermost.rnshare.helpers.RealPathUtil
+import io.codemagic.marijan.demo.reactnative.rnshare.helpers.RealPathUtil
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream

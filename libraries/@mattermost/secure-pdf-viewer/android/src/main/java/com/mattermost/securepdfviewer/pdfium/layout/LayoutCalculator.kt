@@ -1,10 +1,10 @@
-package com.mattermost.securepdfviewer.pdfium.layout
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.layout
 
 import android.util.Log
-import com.mattermost.securepdfviewer.pdfium.PdfView.Companion.PAGE_SPACING
-import com.mattermost.securepdfviewer.pdfium.interaction.ZoomAnimator.Companion.MIN_ZOOM_SCALE
-import com.mattermost.securepdfviewer.pdfium.shared.PdfContext
-import com.mattermost.securepdfviewer.pdfium.shared.PdfViewInterface
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.PdfView.Companion.PAGE_SPACING
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.interaction.ZoomAnimator.Companion.MIN_ZOOM_SCALE
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfContext
+import io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared.PdfViewInterface
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

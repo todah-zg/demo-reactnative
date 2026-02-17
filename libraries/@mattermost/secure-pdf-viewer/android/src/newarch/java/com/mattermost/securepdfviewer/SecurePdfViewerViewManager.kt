@@ -1,4 +1,4 @@
-package com.mattermost.securepdfviewer
+package io.codemagic.marijan.demo.reactnative.securepdfviewer
 
 import com.facebook.react.viewmanagers.SecurePdfViewerManagerInterface
 import com.facebook.react.uimanager.ThemedReactContext

@@ -1,4 +1,4 @@
-package com.mattermost.rnutils
+package io.codemagic.marijan.demo.reactnative.rnutils
 
 import com.facebook.react.TurboReactPackage
 import com.facebook.react.bridge.NativeModule

@@ -1,4 +1,4 @@
-package com.mattermost.securepdfviewer.pdfium.shared
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.pdfium.shared
 
 import android.util.Log
 import kotlinx.coroutines.CoroutineDispatcher

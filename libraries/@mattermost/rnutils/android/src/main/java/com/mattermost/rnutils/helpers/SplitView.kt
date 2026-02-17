@@ -1,4 +1,4 @@
-package com.mattermost.rnutils.helpers
+package io.codemagic.marijan.demo.reactnative.rnutils.helpers
 
 import android.content.Context
 import android.content.res.Configuration
@@ -6,8 +6,8 @@ import android.telephony.TelephonyManager
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableMap
-import com.mattermost.rnutils.RNUtilsModuleImpl
-import com.mattermost.rnutils.enums.Events
+import io.codemagic.marijan.demo.reactnative.rnutils.RNUtilsModuleImpl
+import io.codemagic.marijan.demo.reactnative.rnutils.enums.Events
 
 class SplitView {
     companion object {

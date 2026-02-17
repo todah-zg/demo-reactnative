@@ -1,4 +1,4 @@
-package com.mattermost.securepdfviewer.manager
+package io.codemagic.marijan.demo.reactnative.securepdfviewer.manager
 
 import android.content.Context
 import android.content.SharedPreferences

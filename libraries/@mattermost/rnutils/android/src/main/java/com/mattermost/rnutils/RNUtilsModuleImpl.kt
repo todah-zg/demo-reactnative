@@ -1,4 +1,4 @@
-package com.mattermost.rnutils
+package io.codemagic.marijan.demo.reactnative.rnutils
 
 import android.app.Activity
 import android.graphics.Color
@@ -12,10 +12,10 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableMap
-import com.mattermost.rnutils.helpers.Notifications
-import com.mattermost.rnutils.helpers.RealPathUtil
-import com.mattermost.rnutils.helpers.SaveDataTask
-import com.mattermost.rnutils.helpers.SplitView
+import io.codemagic.marijan.demo.reactnative.rnutils.helpers.Notifications
+import io.codemagic.marijan.demo.reactnative.rnutils.helpers.RealPathUtil
+import io.codemagic.marijan.demo.reactnative.rnutils.helpers.SaveDataTask
+import io.codemagic.marijan.demo.reactnative.rnutils.helpers.SplitView
 import androidx.core.graphics.toColorInt
 import com.facebook.react.bridge.LifecycleEventListener
 

@@ -1,4 +1,4 @@
-package com.mattermost.rnshare
+package io.codemagic.marijan.demo.reactnative.rnshare
 
 import android.app.Activity
 import android.app.NotificationChannel
@@ -14,8 +14,8 @@ import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableMap
-import com.mattermost.rnshare.helpers.RealPathUtil
-import com.mattermost.rnshare.helpers.toJson
+import io.codemagic.marijan.demo.reactnative.rnshare.helpers.RealPathUtil
+import io.codemagic.marijan.demo.reactnative.rnshare.helpers.toJson
 import java.io.File
 
 class MattermostShareImpl(private val reactContext: ReactApplicationContext) {

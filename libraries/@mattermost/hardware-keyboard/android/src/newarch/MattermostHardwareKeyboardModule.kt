@@ -1,4 +1,4 @@
-package com.mattermost.hardware.keyboard
+package io.codemagic.marijan.demo.reactnative.hardware.keyboard
 
 import com.facebook.react.bridge.ReactApplicationContext
 
