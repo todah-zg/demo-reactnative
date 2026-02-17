@@ -1,4 +1,4 @@
-package io.codemagic.marijan.demo.reactnative.helpers;
+package com.mattermost.rnutils.helpers;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReadableArray;

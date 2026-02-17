@@ -1,9 +1,9 @@
-package io.codemagic.marijan.demo.reactnative.helpers.push_notification
+package com.mattermost.rnutils.helpers.push_notification
 
 import com.facebook.react.bridge.ReadableMap
-import io.codemagic.marijan.demo.reactnative.helpers.Network
-import io.codemagic.marijan.demo.reactnative.helpers.PushNotificationDataRunnable
-import io.codemagic.marijan.demo.reactnative.helpers.ResolvePromise
+import com.mattermost.rnutils.helpers.Network
+import com.mattermost.rnutils.helpers.PushNotificationDataRunnable
+import com.mattermost.rnutils.helpers.ResolvePromise
 
 import java.io.IOException
 

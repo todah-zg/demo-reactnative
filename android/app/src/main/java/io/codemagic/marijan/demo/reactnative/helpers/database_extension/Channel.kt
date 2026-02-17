@@ -1,8 +1,8 @@
-package io.codemagic.marijan.demo.reactnative.helpers.database_extension
+package com.mattermost.rnutils.helpers.database_extension
 
 import com.facebook.react.bridge.ReadableMap
-import io.codemagic.marijan.demo.reactnative.helpers.DatabaseHelper
-import io.codemagic.marijan.demo.reactnative.helpers.ReadableMapUtils
+import com.mattermost.rnutils.helpers.DatabaseHelper
+import com.mattermost.rnutils.helpers.ReadableMapUtils
 import com.nozbe.watermelondb.WMDatabase
 import org.json.JSONException
 import org.json.JSONObject

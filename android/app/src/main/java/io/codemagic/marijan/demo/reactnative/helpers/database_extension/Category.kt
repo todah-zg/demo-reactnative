@@ -1,4 +1,4 @@
-package io.codemagic.marijan.demo.reactnative.helpers.database_extension
+package com.mattermost.rnutils.helpers.database_extension
 
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap

@@ -1,4 +1,4 @@
-package io.codemagic.marijan.demo.reactnative.helpers;
+package com.mattermost.rnutils.helpers;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

@@ -1,8 +1,8 @@
-package io.codemagic.marijan.demo.reactnative.helpers.push_notification
+package com.mattermost.rnutils.helpers.push_notification
 
 import com.facebook.react.bridge.ReadableMap
-import io.codemagic.marijan.demo.reactnative.helpers.PushNotificationDataRunnable
-import io.codemagic.marijan.demo.reactnative.helpers.database_extension.*
+import com.mattermost.rnutils.helpers.PushNotificationDataRunnable
+import com.mattermost.rnutils.helpers.database_extension.*
 import com.nozbe.watermelondb.WMDatabase
 
 internal suspend fun PushNotificationDataRunnable.Companion.fetchThread(db: WMDatabase, serverUrl: String, threadId: String, teamId: String?): ReadableMap? {

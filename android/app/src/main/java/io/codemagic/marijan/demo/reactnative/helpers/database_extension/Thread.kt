@@ -1,12 +1,12 @@
-package io.codemagic.marijan.demo.reactnative.helpers.database_extension
+package com.mattermost.rnutils.helpers.database_extension
 
 import android.util.Log
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.NoSuchKeyException
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
-import io.codemagic.marijan.demo.reactnative.helpers.RandomId
-import io.codemagic.marijan.demo.reactnative.helpers.mapCursor
+import com.mattermost.rnutils.helpers.RandomId
+import com.mattermost.rnutils.helpers.mapCursor
 import com.nozbe.watermelondb.WMDatabase
 import org.json.JSONObject
 

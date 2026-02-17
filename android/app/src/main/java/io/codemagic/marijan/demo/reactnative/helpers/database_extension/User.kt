@@ -1,9 +1,9 @@
-package io.codemagic.marijan.demo.reactnative.helpers.database_extension
+package com.mattermost.rnutils.helpers.database_extension
 
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.NoSuchKeyException
 import com.facebook.react.bridge.ReadableArray
-import io.codemagic.marijan.demo.reactnative.helpers.ReadableMapUtils
+import com.mattermost.rnutils.helpers.ReadableMapUtils
 import com.nozbe.watermelondb.WMDatabase
 
 fun getLastPictureUpdate(db: WMDatabase?, userId: String): Double? {

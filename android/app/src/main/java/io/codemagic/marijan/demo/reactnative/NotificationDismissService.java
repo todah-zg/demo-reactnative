@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.app.IntentService;
 import android.os.Bundle;
 
-import io.codemagic.marijan.demo.reactnative.rnutils.helpers.NotificationHelper;
+import com.mattermost.rnutils.helpers.NotificationHelper;
 import io.codemagic.marijan.demo.reactnative.turbolog.TurboLog;
 import com.wix.reactnativenotifications.core.NotificationIntentAdapter;
 

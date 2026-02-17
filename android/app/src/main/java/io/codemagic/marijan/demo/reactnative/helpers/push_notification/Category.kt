@@ -1,12 +1,12 @@
-package io.codemagic.marijan.demo.reactnative.helpers.push_notification
+package com.mattermost.rnutils.helpers.push_notification
 
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
-import io.codemagic.marijan.demo.reactnative.helpers.PushNotificationDataRunnable
-import io.codemagic.marijan.demo.reactnative.helpers.database_extension.findByColumns
-import io.codemagic.marijan.demo.reactnative.helpers.database_extension.queryCurrentUserId
-import io.codemagic.marijan.demo.reactnative.helpers.database_extension.queryMyTeams
+import com.mattermost.rnutils.helpers.PushNotificationDataRunnable
+import com.mattermost.rnutils.helpers.database_extension.findByColumns
+import com.mattermost.rnutils.helpers.database_extension.queryCurrentUserId
+import com.mattermost.rnutils.helpers.database_extension.queryMyTeams
 import com.nozbe.watermelondb.WMDatabase
 
 suspend fun PushNotificationDataRunnable.Companion.fetchMyTeamCategories(db: WMDatabase, serverUrl: String, teamId: String): ReadableMap? {

@@ -1,14 +1,14 @@
-package io.codemagic.marijan.demo.reactnative.helpers.push_notification
+package com.mattermost.rnutils.helpers.push_notification
 
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.NoSuchKeyException
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeArray
-import io.codemagic.marijan.demo.reactnative.helpers.PushNotificationDataRunnable
-import io.codemagic.marijan.demo.reactnative.helpers.ReadableArrayUtils
-import io.codemagic.marijan.demo.reactnative.helpers.ReadableMapUtils
-import io.codemagic.marijan.demo.reactnative.helpers.database_extension.*
+import com.mattermost.rnutils.helpers.PushNotificationDataRunnable
+import com.mattermost.rnutils.helpers.ReadableArrayUtils
+import com.mattermost.rnutils.helpers.ReadableMapUtils
+import com.mattermost.rnutils.helpers.database_extension.*
 import com.nozbe.watermelondb.WMDatabase
 
 internal suspend fun PushNotificationDataRunnable.Companion.fetchPosts(

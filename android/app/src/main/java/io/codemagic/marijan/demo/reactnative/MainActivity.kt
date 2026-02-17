@@ -7,8 +7,8 @@ import androidx.core.view.WindowCompat
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
 import com.facebook.react.defaults.DefaultReactActivityDelegate
-import io.codemagic.marijan.demo.reactnative.hardware.keyboard.MattermostHardwareKeyboardImpl
-import io.codemagic.marijan.demo.reactnative.rnutils.helpers.FoldableObserver
+import com.mattermost.hardware.keyboard.MattermostHardwareKeyboardImpl
+import com.mattermost.rnutils.helpers.FoldableObserver
 import com.reactnativenavigation.NavigationActivity
 import expo.modules.ReactActivityDelegateWrapper
 

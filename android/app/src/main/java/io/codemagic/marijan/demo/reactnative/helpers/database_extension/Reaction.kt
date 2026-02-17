@@ -1,6 +1,6 @@
-package io.codemagic.marijan.demo.reactnative.helpers.database_extension
+package com.mattermost.rnutils.helpers.database_extension
 
-import io.codemagic.marijan.demo.reactnative.helpers.RandomId
+import com.mattermost.rnutils.helpers.RandomId
 import com.nozbe.watermelondb.WMDatabase
 import org.json.JSONArray
 

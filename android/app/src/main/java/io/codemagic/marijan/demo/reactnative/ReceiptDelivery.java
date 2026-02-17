@@ -10,7 +10,7 @@ import org.json.JSONObject;
 import com.facebook.react.bridge.Arguments;
 
 import com.facebook.react.bridge.WritableMap;
-import io.codemagic.marijan.demo.reactnative.helpers.*;
+import com.mattermost.rnutils.helpers.*;
 import io.codemagic.marijan.demo.reactnative.turbolog.TurboLog;
 
 import okhttp3.Response;

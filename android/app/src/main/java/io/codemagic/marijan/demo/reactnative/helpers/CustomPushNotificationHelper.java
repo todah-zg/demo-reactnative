@@ -1,4 +1,4 @@
-package io.codemagic.marijan.demo.reactnative.helpers;
+package com.mattermost.rnutils.helpers;
 
 import android.annotation.SuppressLint;
 import android.app.Notification;
@@ -29,7 +29,7 @@ import androidx.core.app.RemoteInput;
 import androidx.core.graphics.drawable.IconCompat;
 
 import io.codemagic.marijan.demo.reactnative.*;
-import io.codemagic.marijan.demo.reactnative.rnutils.helpers.NotificationHelper;
+import com.mattermost.rnutils.helpers.NotificationHelper;
 import com.nozbe.watermelondb.WMDatabase;
 import io.codemagic.marijan.demo.reactnative.turbolog.TurboLog;
 
@@ -48,11 +48,11 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static io.codemagic.marijan.demo.reactnative.helpers.database_extension.GeneralKt.getDatabaseForServer;
-import static io.codemagic.marijan.demo.reactnative.helpers.database_extension.GeneralKt.getDeviceToken;
-import static io.codemagic.marijan.demo.reactnative.helpers.database_extension.SystemKt.queryConfigServerVersion;
-import static io.codemagic.marijan.demo.reactnative.helpers.database_extension.SystemKt.queryConfigSigningKey;
-import static io.codemagic.marijan.demo.reactnative.helpers.database_extension.UserKt.getLastPictureUpdate;
+import static com.mattermost.rnutils.helpers.database_extension.GeneralKt.getDatabaseForServer;
+import static com.mattermost.rnutils.helpers.database_extension.GeneralKt.getDeviceToken;
+import static com.mattermost.rnutils.helpers.database_extension.SystemKt.queryConfigServerVersion;
+import static com.mattermost.rnutils.helpers.database_extension.SystemKt.queryConfigSigningKey;
+import static com.mattermost.rnutils.helpers.database_extension.UserKt.getLastPictureUpdate;
 
 public class CustomPushNotificationHelper {
     public static final String CHANNEL_HIGH_IMPORTANCE_ID = "channel_01";

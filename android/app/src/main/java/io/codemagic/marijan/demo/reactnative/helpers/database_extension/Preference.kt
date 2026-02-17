@@ -1,7 +1,7 @@
-package io.codemagic.marijan.demo.reactnative.helpers.database_extension
+package com.mattermost.rnutils.helpers.database_extension
 
 import com.facebook.react.bridge.Arguments
-import io.codemagic.marijan.demo.reactnative.helpers.mapCursor
+import com.mattermost.rnutils.helpers.mapCursor
 import com.nozbe.watermelondb.WMDatabase
 
 fun getTeammateDisplayNameSetting(db: WMDatabase): String {

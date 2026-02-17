@@ -1,10 +1,10 @@
-package io.codemagic.marijan.demo.reactnative.helpers.push_notification
+package com.mattermost.rnutils.helpers.push_notification
 
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
-import io.codemagic.marijan.demo.reactnative.helpers.PushNotificationDataRunnable
-import io.codemagic.marijan.demo.reactnative.helpers.ReadableArrayUtils
+import com.mattermost.rnutils.helpers.PushNotificationDataRunnable
+import com.mattermost.rnutils.helpers.ReadableArrayUtils
 
 internal suspend fun PushNotificationDataRunnable.Companion.fetchUsersById(serverUrl: String, userIds: ReadableArray): ReadableArray? {
     return try {

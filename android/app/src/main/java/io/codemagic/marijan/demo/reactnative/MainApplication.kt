@@ -19,7 +19,7 @@ import com.facebook.soloader.SoLoader
 import io.codemagic.marijan.demo.reactnative.networkclient.RCTOkHttpClientFactory
 import io.codemagic.marijan.demo.reactnative.rnshare.helpers.RealPathUtil
 import io.codemagic.marijan.demo.reactnative.turbolog.TurboLog
-import cio.codemagic.marijan.demo.reactnative.turbolog.ConfigureOptions
+import io.codemagic.marijan.demo.reactnative.turbolog.ConfigureOptions
 import com.nozbe.watermelondb.jsi.JSIInstaller
 import com.nozbe.watermelondb.jsi.WatermelonDBJSIPackage
 import com.reactnativenavigation.NavigationApplication

@@ -1,13 +1,13 @@
-package io.codemagic.marijan.demo.reactnative.helpers.database_extension
+package com.mattermost.rnutils.helpers.database_extension
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.text.TextUtils
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.ReadableMap
-import io.codemagic.marijan.demo.reactnative.helpers.DatabaseHelper
-import io.codemagic.marijan.demo.reactnative.helpers.QueryArgs
-import io.codemagic.marijan.demo.reactnative.helpers.mapCursor
+import com.mattermost.rnutils.helpers.DatabaseHelper
+import com.mattermost.rnutils.helpers.QueryArgs
+import com.mattermost.rnutils.helpers.mapCursor
 import com.nozbe.watermelondb.WMDatabase
 import java.util.Arrays
 
