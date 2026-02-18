@@ -18,12 +18,6 @@
     "iOS": [
       {
         "rule": "cli",
-        "binary": "watchman",
-        "error": "install watchman `brew install watchman`",
-        "platform": "darwin"
-      },
-      {
-        "rule": "cli",
         "binary": "xcodebuild",
         "semver": ">=13.0",
         "error": "install xcode",
