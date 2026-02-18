@@ -60,8 +60,9 @@ workflows:
       ios_signing:
         distribution_type: app_store
         bundle_identifier: io.codemagic.marijan.demo.reactnative
+      node: 22.14.0
+      npm: 10
       vars:
-
         BUNDLE_ID: "io.codemagic.marijan.demo.reactnative"
         XCODE_WORKSPACE: "Mattermost.xcworkspace" # <-- Put the name of your Xcode workspace here
         XCODE_SCHEME: "Mattermost" # <-- Put the name of your Xcode scheme here
