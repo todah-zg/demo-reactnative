@@ -970,15 +970,12 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				37DA4BA41E6F55AD002B058E /* Embed Frameworks */,
 				AE4769B235D14E6C9C64EA78 /* Upload Debug Symbols to Sentry */,
-				7FFE32A91FD9CB650038C7A0 /* Embed App Extensions */,
 				A40F47AC8A062DFCF1B2A23E /* [CP] Embed Pods Frameworks */,
 				60D7AC7FCA7AC276C4308D05 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7F581D38221ED5C60099E66B /* PBXTargetDependency */,
-				7FC5698F28563FDB000B0905 /* PBXTargetDependency */,
 			);
 			name = Mattermost;
 			productName = "Hello World";
