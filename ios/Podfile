@@ -68,36 +68,45 @@ post_install do |installer|
       :mac_catalyst_enabled => false
     )
 
-  # Fix 1: HTTPHeaders.swift — rename Alamofire's extension property to avoid
-  # redeclaration against the iOS 26 native HTTPURLResponse.allHeaders
-  headers_file = File.join(installer.sandbox.root, 'Alamofire/Source/Core/HTTPHeaders.swift')
-  if File.exist?(headers_file)
-    content = File.read(headers_file)
-    if content.match?(/extension HTTPURLResponse/) && content.match?(/\bvar allHeaders\b/)
-      content = content.gsub(/\bvar allHeaders\b/, 'var afAllHeaders')
-      # Also fix callers within this file
-      content = content.gsub(/\.allHeaders\b/, '.afAllHeaders')
-      File.write(headers_file, content)
-      puts "Patched Alamofire HTTPHeaders.swift for iOS 26 SDK compatibility"
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.1'
     end
   end
 
-  # Fix 2: SessionDelegate.swift — rename local variables named allHeaders
-  # Use a unique per-occurrence suffix to avoid creating duplicate declarations
   session_delegate = File.join(installer.sandbox.root, 'Alamofire/Source/Core/SessionDelegate.swift')
   if File.exist?(session_delegate)
     content = File.read(session_delegate)
-    counter = 0
-    # Rename each `let allHeaders =` declaration uniquely
-    content = content.gsub(/\blet allHeaders\b/) { counter += 1; "let afAllHeaders#{counter}" }
-    # Rename bare usages inside the method bodies — safe because afAllHeaders1/2
-    # only exist in their own method scope, and the remaining `allHeaders` bare refs
-    # all refer to local vars (not the SDK property, which has no usage here)
-    content = content.gsub(/(?<!let )(?<!\w)allHeaders\b/, 'afAllHeaders1')
-    File.write(session_delegate, content)
-    puts "Patched Alamofire SessionDelegate.swift for iOS 26 SDK compatibility (#{counter} declarations)"
+
+    if content.include?('let allHeaders = ')
+      # Each 'let allHeaders' declaration gets a unique name (afAllHeaders1, afAllHeaders2, ...)
+      # All lines following a declaration use that declaration's name until the next one appears.
+      current_count = 0
+      current_name = nil
+      lines = content.split("\n")
+
+      new_lines = lines.map do |line|
+        if line =~ /\blet allHeaders\b(?!Fields)/
+          # New declaration — assign a new unique name
+          current_count += 1
+          current_name = "afAllHeaders#{current_count}"
+          line.gsub(/\ballHeaders\b(?!Fields)/, current_name)
+        elsif current_name && line =~ /\ballHeaders\b(?!Fields)/
+          # Usage of the current declaration's variable
+          line.gsub(/\ballHeaders\b(?!Fields)/, current_name)
+        else
+          line
+        end
+      end
+
+      content = new_lines.join("\n")
+      File.write(session_delegate, content)
+      puts "✅ Patched Alamofire SessionDelegate.swift (#{current_count} allHeaders declaration(s) uniquely renamed)"
+    else
+      puts "⏭️  Alamofire SessionDelegate.swift: no 'let allHeaders' found, skipping"
+    end
   end
-  
+
     installer.pods_project.targets.each do |t|
       if t.name == 'TurboLogIOSNative'
          t.source_build_phase.files.each do |file|
