@@ -86,17 +86,17 @@ post_install do |installer|
       end
     end
 
-      # Fix TurboLogIOSNative module.modulemap issue
+    # Fix TurboLogIOSNative module.modulemap issue
   installer.pods_project.targets.each do |target|
     if target.name == 'TurboLogIOSNative'
       target.source_build_phase.files.each do |build_file|
-        if build_file.file_ref.path.end_with?('module.modulemap')
+        if build_file.file_ref && build_file.file_ref.path.end_with?('module.modulemap')
           target.source_build_phase.files.delete(build_file)
         end
       end
     end
   end
-  
+
 end
 
 
