@@ -78,32 +78,44 @@ post_install do |installer|
   if File.exist?(session_delegate)
     content = File.read(session_delegate)
 
-    if content.include?('let allHeaders = ')
-      # Each 'let allHeaders' declaration gets a unique name (afAllHeaders1, afAllHeaders2, ...)
-      # All lines following a declaration use that declaration's name until the next one appears.
+    # ── Idempotency guard ──────────────────────────────────────────────────────
+    # Previous builds used 'let allHeaders = ' as the guard, but that fails when
+    # Pods are cached and the file was already partially patched (afAllHeaders
+    # already present).  Check for our OWN marker instead.
+    if content.include?('afAllHeaders')
+      puts "⏭️  Alamofire SessionDelegate.swift: already patched, skipping"
+    elsif content.match?(/\b(?:let|var)\s+allHeaders\b(?!Fields)/)
+      # ── Counter-based unique rename ──────────────────────────────────────────
+      # Each new  let/var allHeaders  declaration gets a fresh unique name
+      # (afAllHeaders1, afAllHeaders2, …).  All bare allHeaders usages between
+      # two declarations are rewritten to the name of the most-recent declaration.
+      #
+      # Fixes: the previous patch used  \blet allHeaders\b  and missed
+      #        `var allHeaders` declarations, causing a redeclaration when the
+      #        patch ran a second time on a cached (partially-patched) Pods dir.
       current_count = 0
-      current_name = nil
+      current_name  = nil
       lines = content.split("\n")
 
       new_lines = lines.map do |line|
-        if line =~ /\blet allHeaders\b(?!Fields)/
-          # New declaration — assign a new unique name
+        if line =~ /\b(?:let|var)\s+allHeaders\b(?!Fields)/
+          # New declaration → assign next unique name
           current_count += 1
           current_name = "afAllHeaders#{current_count}"
           line.gsub(/\ballHeaders\b(?!Fields)/, current_name)
         elsif current_name && line =~ /\ballHeaders\b(?!Fields)/
-          # Usage of the current declaration's variable
+          # Usage after a declaration → rewrite to current declaration's name
           line.gsub(/\ballHeaders\b(?!Fields)/, current_name)
         else
           line
         end
       end
 
-      content = new_lines.join("\n")
-      File.write(session_delegate, content)
-      puts "✅ Patched Alamofire SessionDelegate.swift (#{current_count} allHeaders declaration(s) uniquely renamed)"
+      File.write(session_delegate, new_lines.join("\n"))
+      puts "✅ Patched Alamofire SessionDelegate.swift " \
+           "(#{current_count} allHeaders declaration(s) uniquely renamed)"
     else
-      puts "⏭️  Alamofire SessionDelegate.swift: no 'let allHeaders' found, skipping"
+      puts "⏭️  Alamofire SessionDelegate.swift: no allHeaders declarations found, skipping"
     end
   end
 
