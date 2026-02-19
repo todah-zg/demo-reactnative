@@ -205,7 +205,7 @@
     "lint": "eslint --ignore-pattern .gitignore --ignore-pattern node_modules --quiet .",
     "mmjstool": "mmjstool",
     "pod-install": "cd ios && RCT_NEW_ARCH_ENABLED=0 pod install",
-    "pod-install-m1": "cd ios && RCT_NEW_ARCH_ENABLED=0 arch -x86_64 pod install",
+    "pod-install-m1": "cd ios && RCT_NEW_ARCH_ENABLED=0 pod install",
     "postinstall": "patch-package && ./scripts/postinstall.sh",
     "prepare": "husky",
     "preinstall": "./scripts/preinstall.sh && npx solidarity",

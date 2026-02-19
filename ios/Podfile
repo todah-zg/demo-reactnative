@@ -69,6 +69,13 @@ post_install do |installer|
     )
 
     installer.pods_project.targets.each do |t|
+      if t.name == 'TurboLogIOSNative'
+         t.source_build_phase.files.each do |file|
+           if file.file_ref.path.end_with?('.modulemap')
+             file.settings = { 'COMPILER_FLAGS' => '' }
+           end
+         end
+       end
       t.build_configurations.each do |bc|
         bc.build_settings['SWIFT_VERSION']        = '5.9'
         bc.build_settings['OTHER_LDFLAGS']        = ['$(inherited)', '-ObjC']
