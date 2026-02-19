@@ -68,6 +68,27 @@ post_install do |installer|
       :mac_catalyst_enabled => false
     )
 
+  # Fix Alamofire iOS 26 SDK conflict - allHeaders redeclaration
+  session_delegate = File.join(installer.sandbox.root, 'Alamofire/Source/Core/SessionDelegate.swift')
+  if File.exist?(session_delegate)
+    content = File.read(session_delegate)
+    if content.include?('let allHeaders = (downloadRequest.response)?.allHeaderFields')
+      content = content.gsub(
+        'let allHeaders = (downloadRequest.response)?.allHeaderFields as? NSDictionary ?? NSDictionary()',
+        'let afAllHeaders = (downloadRequest.response)?.allHeaderFields as? NSDictionary ?? NSDictionary()'
+      )
+      # Replace the subsequent usage of allHeaders in the same scope
+      content = content.gsub(
+      'let allHeaders = (downloadRequest.response)?.allHeaderFields as? NSDictionary ?? NSDictionary()',
+      'let afAllHeaders = (downloadRequest.response)?.allHeaderFields as? NSDictionary ?? NSDictionary()'
+      )
+      # Patch all remaining bare `allHeaders` references (only in this file, safe since 
+      # the variable name is unique within SessionDelegate.swift)
+      content = content.gsub(/\ballHeaders\b/, 'afAllHeaders')
+      File.write(session_delegate, content)
+    end
+  end
+
     installer.pods_project.targets.each do |t|
       if t.name == 'TurboLogIOSNative'
          t.source_build_phase.files.each do |file|
