@@ -68,55 +68,60 @@ post_install do |installer|
       :mac_catalyst_enabled => false
     )
 
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.1'
-    end
-  end
+  # ─── Alamofire iOS 26 SDK compatibility patch ───────────────────────────────
+  # Renames duplicate local variable declarations in SessionDelegate.swift that
+  # cause "invalid redeclaration" errors when building with Xcode 26.
+  # Handles both 'allHeaders' and 'sizeString' (and any other variables added
+  # to PATCH_VARS below).
+  session_delegate = File.join(installer.sandbox.root,
+                               'Alamofire/Source/Core/SessionDelegate.swift')
 
-  session_delegate = File.join(installer.sandbox.root, 'Alamofire/Source/Core/SessionDelegate.swift')
   if File.exist?(session_delegate)
     content = File.read(session_delegate)
 
-    # ── Idempotency guard ──────────────────────────────────────────────────────
-    # Previous builds used 'let allHeaders = ' as the guard, but that fails when
-    # Pods are cached and the file was already partially patched (afAllHeaders
-    # already present).  Check for our OWN marker instead.
-    if content.include?('afAllHeaders')
-      puts "⏭️  Alamofire SessionDelegate.swift: already patched, skipping"
-    elsif content.match?(/\b(?:let|var)\s+allHeaders\b(?!Fields)/)
-      # ── Counter-based unique rename ──────────────────────────────────────────
-      # Each new  let/var allHeaders  declaration gets a fresh unique name
-      # (afAllHeaders1, afAllHeaders2, …).  All bare allHeaders usages between
-      # two declarations are rewritten to the name of the most-recent declaration.
-      #
-      # Fixes: the previous patch used  \blet allHeaders\b  and missed
-      #        `var allHeaders` declarations, causing a redeclaration when the
-      #        patch ran a second time on a cached (partially-patched) Pods dir.
-      current_count = 0
-      current_name  = nil
-      lines = content.split("\n")
+    # Variables known to be redeclared in Alamofire 5.x under iOS 26 SDK
+    PATCH_VARS = %w[allHeaders sizeString].freeze
+
+    PATCH_VARS.each do |var_name|
+      marker      = "af_#{var_name}_patched"
+      decl_regex  = /\b(?:let|var)\s+#{Regexp.escape(var_name)}\b/
+      usage_regex = /\b#{Regexp.escape(var_name)}\b/
+
+      if content.include?(marker)
+        puts "⏭️  Alamofire SessionDelegate.swift: '#{var_name}' already patched, skipping"
+        next
+      end
+
+      unless content.match?(decl_regex)
+        puts "⏭️  Alamofire SessionDelegate.swift: no '#{var_name}' declarations found, skipping"
+        next
+      end
+
+      count        = 0
+      current_name = nil
+      lines        = content.split("\n")
 
       new_lines = lines.map do |line|
-        if line =~ /\b(?:let|var)\s+allHeaders\b(?!Fields)/
-          # New declaration → assign next unique name
-          current_count += 1
-          current_name = "afAllHeaders#{current_count}"
-          line.gsub(/\ballHeaders\b(?!Fields)/, current_name)
-        elsif current_name && line =~ /\ballHeaders\b(?!Fields)/
-          # Usage after a declaration → rewrite to current declaration's name
-          line.gsub(/\ballHeaders\b(?!Fields)/, current_name)
+        if line =~ decl_regex
+          count        += 1
+          current_name  = "af#{var_name.capitalize}#{count}"
+          line.gsub(usage_regex, current_name)
+        elsif current_name && line =~ usage_regex
+          line.gsub(usage_regex, current_name)
         else
           line
         end
       end
 
-      File.write(session_delegate, new_lines.join("\n"))
-      puts "✅ Patched Alamofire SessionDelegate.swift " \
-           "(#{current_count} allHeaders declaration(s) uniquely renamed)"
-    else
-      puts "⏭️  Alamofire SessionDelegate.swift: no allHeaders declarations found, skipping"
+      # Append marker comment so idempotency check works on cached Pods
+      new_lines << "// #{marker}"
+      content = new_lines.join("\n")
+
+      puts "✅ Patched Alamofire SessionDelegate.swift: " \
+           "'#{var_name}' → #{count} unique declaration(s)"
     end
+
+    File.write(session_delegate, content)
   end
 
     installer.pods_project.targets.each do |t|
