@@ -87,7 +87,7 @@ workflows:
           cd ios && pod install
 
       - name: Set up provisioning profiles settings on Xcode project
-        script: xcode-project use-profiles --project "$CM_BUILD_DIRios/$XCODE_SCHEME.xcodeproj" 
+        script: xcode-project use-profiles --project "$CM_BUILD_DIR/ios/$XCODE_SCHEME.xcodeproj" 
 
       - name: Increment build number
         script: | 
