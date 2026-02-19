@@ -85,4 +85,15 @@ post_install do |installer|
         c.build_settings.delete('APPLICATION_EXTENSION_API_ONLY')
       end
     end
+end
+
+  # Fix TurboLogIOSNative module.modulemap issue
+  installer.pods_project.targets.each do |target|
+    if target.name == 'TurboLogIOSNative'
+      target.source_build_phase.files.each do |build_file|
+        if build_file.file_ref.path.end_with?('module.modulemap')
+          target.source_build_phase.files.delete(build_file)
+        end
+      end
+    end
   end
