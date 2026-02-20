@@ -150,7 +150,7 @@ workflows:
 
         submit_to_testflight: true
         beta_groups: # Specify the names of beta tester groups that will get access to the build once it has passed beta review.
-          - internal_testers
+          - external_testers
 
         # Configuration related to App Store (optional)
         # Note: This action is performed during post-processing.
