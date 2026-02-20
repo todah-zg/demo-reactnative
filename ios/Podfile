@@ -170,6 +170,22 @@ post_install do |installer|
     end
   end
 
+    # Fix react-native-paste-input missing iostextinput header on iOS 26 / new arch
+  installer.pods_project.targets.each do |target|
+    if target.name == 'react-native-paste-input'
+      target.build_configurations.each do |config|
+        # React-FabricComponents contains react/renderer/components/iostextinput/
+        fabric_headers = '$(BUILT_PRODUCTS_DIR)/React-FabricComponents/React_FabricComponents.framework/Headers'
+        existing = config.build_settings['HEADER_SEARCH_PATHS'] || ['$(inherited)']
+        existing = [existing] if existing.is_a?(String)
+        unless existing.include?(fabric_headers)
+          existing << fabric_headers
+          config.build_settings['HEADER_SEARCH_PATHS'] = existing
+        end
+      end
+    end
+  end
+
 end
 
 
