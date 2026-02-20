@@ -84,6 +84,7 @@ workflows:
 
       - name: Install CocoaPods dependencies
         script: | 
+          rm -rf ios/Pods ios/Podfile.lock
           cd ios && pod install
 
       - name: Set up provisioning profiles settings on Xcode project

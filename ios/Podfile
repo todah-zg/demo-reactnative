@@ -160,6 +160,16 @@ post_install do |installer|
     end
   end
 
+  # Fix react-native-paste-input C++ compilation on iOS 26 SDK
+  installer.pods_project.targets.each do |target|
+    if target.name == 'react-native-paste-input'
+      target.build_configurations.each do |config|
+        config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++20'
+        config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
+      end
+    end
+  end
+
 end
 
 
