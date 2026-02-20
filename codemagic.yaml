@@ -1,8 +1,15 @@
+# ================================================================================================
+#
+#                                   ANDROID WORKFLOW
+#
+# ================================================================================================
+
 workflows:
   react-native-android:
     name: React Native Android
     max_build_duration: 120
     instance_type: linux_x2
+    
     environment:
       android_signing:
         - marijan_android_keystore
@@ -11,6 +18,12 @@ workflows:
       #  - google_play
       vars:
         PACKAGE_NAME: "io.codemagic.marijan.demo.reactnative"
+
+    cache:
+      cache_paths:
+        - $HOME/.gradle/caches
+        - $HOME/.npm
+
     scripts:
       - name: Set Android SDK location
         script: | 
@@ -50,12 +63,19 @@ workflows:
 #        submit_as_draft: true
 
 
+# ================================================================================================
+#
+#                                   iOS WORKFLOW
+#
+# ================================================================================================
+
   react-native-ios:
     name: React Native iOS
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
       app_store_connect: marijan-demo-key
+    
     environment:
       ios_signing:
         provisioning_profiles:
@@ -70,7 +90,13 @@ workflows:
         XCODE_WORKSPACE: "Mattermost.xcworkspace" # <-- Put the name of your Xcode workspace here
         XCODE_SCHEME: "Mattermost" # <-- Put the name of your Xcode scheme here
         APP_STORE_APPLE_ID: 6759331072
-
+    
+    cache:
+      cache_paths:
+        - $HOME/Library/Caches/CocoaPods
+        - $HOME/.npm
+        - ~/Library/Developer/Xcode/DerivedData/CompilationCache.noindex
+    
     scripts:
       - name: Install npm dependencies
         script: | 
@@ -100,8 +126,9 @@ workflows:
         script: | 
           xcode-project build-ipa \
             --workspace "$CM_BUILD_DIR/ios/$XCODE_WORKSPACE" \
-            --scheme "$XCODE_SCHEME"
-
+            --scheme "$XCODE_SCHEME" \
+            --archive-xcargs "COMPILATION_CACHE_ENABLE_CACHING=True"
+          
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
